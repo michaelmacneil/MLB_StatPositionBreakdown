@@ -1,0 +1,146 @@
+.page-head {
+  color: #fff;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: #0066FF;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: "Caladea", "Courier";
+}
+
+input[type='text'] {
+  background-color: #cce0ff;
+  line-height: 1.2em;
+  font-size: 1em;
+  padding-left: .3em;
+  border: 3px solid #fff;
+
+    color: #0066FF;
+  font-family: "Arial",sans-serif;
+}
+
+input[type='submit'] {
+  color: #0066FF;
+    background-color: #cce0ff;
+    line-height: 1.3em;
+    font-size: 1.2em;
+    padding-left: .3em;
+    font-family: "Courier",sans-serif;
+    border: 3px solid #000000;
+    font-weight: 600;
+}
+
+input[type='submit']:hover {
+  border: 3px solid #fff;
+}
+
+header {
+  display: block;
+}
+
+body {
+  background-color: #cce0ff;
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #003399;
+  overflow-y: scroll;
+  min-height: 100%;
+  font-weight: 300;
+  height: 100%;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  font-family: "Courier",sans-serif;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+}
+
+li {
+	align-items:center;
+	justify-content:center;
+}
+
+
+.nav-content {
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.navItem {
+  float: left;
+  padding-right: 1em;
+}
+
+.topLeft {
+  position: absolute;
+  top: 1%;
+  left: 5%;
+}
+
+.topRight {
+   position: absolute;
+   top: 0%;
+   right: 5%;
+   list-style: none;
+}
+
+.input {
+  padding-bottom: .2em;
+  padding-top: .2em;
+}
+
+.header-content {
+  position: relative;
+  width: 75%;
+  padding-top:5%;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.wrapper {
+  max-width: 48em;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.column {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 70px 45px;
+  justify-content: center;
+  border-bottom: 0px solid #E6ECF8;
+  border-right: 1px solid #E6ECF8;
+}
+
+.columns {
+  display: flex;
+  justify-content: center;
+}

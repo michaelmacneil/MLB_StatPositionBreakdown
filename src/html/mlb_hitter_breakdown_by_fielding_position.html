@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <title>MLB Hitter Breakdown By Fielding Positon</title>
+  <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+  <script src="../js/hitterBreakdown.js"></script>
+  <link rel="stylesheet" href="../css/styling.css" type="text/css" media="screen"/>
+</head>
+<body>
+  <div class="nav-content">
+    <div class="navigation">
+      <nav>
+        <a class="topLeft" href="/">
+            <img src="../../images/MM_icon.png">
+        </a>
+        <ul class="topRight">
+          <li class="navItem">
+             <a href="https://github.com/michaelmacneil">
+               <img src="../../images/GitHub-Mark-64px.png">
+             </a>
+          </li>
+          <li class="navItem">
+             <a href="https://www.linkedin.com/in/michael-macneil-a54a1135/">
+               <img src="../../images/In-Black-66px-R.png">
+             </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div id="playerNameBlock" class="contents page-head">
+    <div class="input">
+      <h4>Check the 2018 statistics for any MLB player</h4>
+      <label for="player name">Player Name</label>
+      <input id="playerName" type="text"></input>
+    </div>
+    <div id="buttonDiv" class="input">
+      <input id="seeBreakdown" type="submit" value="See Hitting Breakdown">
+    </div>
+  </div>
+  <div id="displayArea" class="columns"></div>
+  <div id="errorArea"><div>
+</body>
