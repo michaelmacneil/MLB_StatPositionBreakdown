@@ -1,7 +1,7 @@
 
 function submitPlayerBreakdownRequest(playerName, gameName) {
   var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "http://localhost:9090/getStatisticsByPostionForPlayer?playerName=" + playerName, false);
+  xhttp.open("POST", "http://ec2-54-165-12-169.compute-1.amazonaws.com:9090/getStatisticsByPostionForPlayer?playerName=" + playerName, false);
   xhttp.setRequestHeader("Content-type", "application/json");
   xhttp.send();
   var response = JSON.parse(xhttp.responseText);
@@ -18,19 +18,35 @@ function seeBreakdown() {
     // Forms have been successfully filled out
     var response = submitPlayerBreakdownRequest(playerName)
     if (response.Success) {
+      var playerMessage = document.createElement('div');
+      playerMessage.id = "playerMessage";
+      playerMessage.className = "bold text-center center";
+      playerMessage.innerHTML = "Hitting stats for " + playerName;
+      displayArea.appendChild(playerMessage);
+
       // Create element for each position breakdown
       for (var x in response.PlayerStatsByPosition) {
         var hitStatsElement = document.createElement('ul');
-        hitStatsElement.id = "hit_stats_element_" + x
+        hitStatsElement.id = "hit_stats_element_" + x;
         hitStatsElement.className = "hit_stats_element column";
-        hitStatsElement.innerHTML = response.PlayerStatsByPosition[x].PositionName
         displayArea.appendChild(hitStatsElement);
+
+        var hitStatsElementPosition = document.createElement('li');
+        hitStatsElementPosition.id = "hit_stats_element_" + x + "_position";
+        hitStatsElementPosition.className = "hit_stats_element_item bold";
+        hitStatsElementPosition.innerHTML = response.PlayerStatsByPosition[x].PositionName;
+        document.getElementById("hit_stats_element_" + x).appendChild(hitStatsElementPosition);
+
         Object.keys(response.PlayerStatsByPosition[x]).forEach(function(key,index) {
           if (!key.includes("Position")) {
             var hitStatsElementItem = document.createElement('li');
             hitStatsElementItem.id = "hit_stats_element_" + x + "_" + index
             hitStatsElementItem.className = "hit_stats_element_item"
-            hitStatsElementItem.innerHTML = key + ": " + response.PlayerStatsByPosition[x][key]
+            if (response.PlayerStatsByPosition[x][key] % 1 != 0) {
+              hitStatsElementItem.innerHTML = key + ": " + response.PlayerStatsByPosition[x][key].toFixed(3)
+            } else {
+              hitStatsElementItem.innerHTML = key + ": " + response.PlayerStatsByPosition[x][key]
+            }
             document.getElementById("hit_stats_element_" + x).appendChild(hitStatsElementItem);
           }
         });
