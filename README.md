@@ -14,18 +14,16 @@ Back then I couldn't get the actual stats to back up my claim and I couldn't fin
 ## Setup
 
 ### Front End
-HTML
-JS
-CSS
+HTML/JS/CSS
 
 ### Back End
-GOLANG
+Golang
 
 ## Author
-* **Michael MacNeil** [michaelmacneil](https://github.com/michaelmacneil)
+* **Michael MacNeil** - [michaelmacneil](https://github.com/michaelmacneil)
 
 ## Deployed Location
-* [mmacneil.com/MLB_StatPositionBreakdown](http://mmacneil.com/MLB_StatPositionBreakdown)
+* [mmacneil.com/MLB_StatPositionBreakdown](http://mmacneil.com/MLB_StatPositionBreakdown/html/mlb_hitter_breakdown_by_fielding_position.html)
 
 ## Resources
 * [retrosheet.org](http://retrosheet.org/game.htm)
