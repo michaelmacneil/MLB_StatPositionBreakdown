@@ -29,15 +29,36 @@
     </div>
   </div>
   <div id="playerNameBlock" class="contents page-head">
-    <div class="input">
-      <h4>Check the 2018 statistics for any MLB player</h4>
-      <label for="player name">Player Name</label>
-      <input id="playerName" type="text"></input>
-    </div>
-    <div id="buttonDiv" class="input">
-      <input id="seeBreakdown" type="submit" value="See Hitting Breakdown">
+    <h4>Check the 2018 statistics for any MLB player</h4>
+    <div class="columns">
+      <div class="column">
+        <div class="input">
+          <label for="player name">Player Name</label>
+          <input id="playerName" type="text"></input>
+        </div>
+        <div id="buttonDiv" class="input">
+          <input id="seeBreakdown" class="bigButton" type="submit" value="See Hitting Breakdown">
+        </div>
+      </div>
+      <div class="column">
+        <div id="teamSelect" class="contents selectContainer">
+          <label for="team_list">Team: </label>
+          <select id="team_list" class="list">
+            <option id="team_element_0" class="team_element" value="N/A">Select A Team</option>
+          </select>
+        </div>
+        <div id="playerSelect" class="contents selectContainer">
+          <label for="player_list">Player: </label>
+          <select id="player_list" class="list">
+            <option id="player_element_0" class="player_element" value="N/A">Select A Player</option>
+          </select>
+        </div>
+      </div>
     </div>
   </div>
-  <div id="displayArea" class="columns"></div>
+  <div id="displayContainer">
+    <h4 id="playerMessage" class="bold text-center big"></h4>
+    <div id="displayArea" class="columns"></div>
+  </div>
   <div id="errorArea"><div>
 </body>

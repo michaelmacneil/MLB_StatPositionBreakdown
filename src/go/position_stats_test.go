@@ -5,9 +5,9 @@ import (
 )
 
 func Test_getPositionName_ValidString(t *testing.T) {
-  positionName := getPositionName("1")
+  positionName := getPositionName("10")
   if positionName != "DH" {
-    t.Errorf("getPositionName('1') is incorrect, got: %d, want: %d.", positionName, "DH")
+    t.Errorf("getPositionName('10') is incorrect, got: %d, want: %d.", positionName, "DH")
   }
 }
 
@@ -15,13 +15,6 @@ func Test_getPositionName_InvalidString(t *testing.T) {
   positionName := getPositionName("N/A")
   if positionName != "Other" {
     t.Errorf("getPositionName('N/A') is incorrect, got: %d, want: %d.", positionName, "Other")
-  }
-}
-
-func Test_cleanString_spaces(t *testing.T) {
-  spacesRemoved := cleanString("N O _ S P A C E S")
-  if spacesRemoved != "NO_SPACES" {
-    t.Errorf("cleanString('N O _ S P A C E S') is incorrect, got: %d, want: %d.", spacesRemoved, "NO_SPACES")
   }
 }
 

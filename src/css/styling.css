@@ -1,9 +1,7 @@
 .page-head {
   color: #fff;
   padding-top: 1%;
-  padding-bottom: 1%;
   background-color: #0066FF;
-  margin-bottom: 5px;
   text-align: center;
   font-size: 1.5em;
   font-weight: 500;
@@ -16,24 +14,31 @@ input[type='text'] {
   font-size: 1em;
   padding-left: .3em;
   border: 3px solid #fff;
-
   color: #0066FF;
-  font-family: "Arial",sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 input[type='submit'] {
   color: #0066FF;
-    background-color: #cce0ff;
-    line-height: 1.3em;
-    font-size: 1.2em;
-    padding-left: .3em;
-    font-family: "Courier",sans-serif;
-    border: 3px solid #000000;
-    font-weight: 600;
+  background-color: #cce0ff;
+  font-family: "Courier", sans-serif;
+  font-weight: 600;
+  border: 1px solid #000000;
+  font-size: 1em;
+}
+
+select {
+  color: #0066FF;
+  background-color: #cce0ff;
+  font-family: "Courier", sans-serif;
+  font-weight: 600;
+  border: 1px solid #000000;
+  font-size: 1em;
+  max-width: 20em;
 }
 
 input[type='submit']:hover {
-  border: 3px solid #fff;
+  border: 1px solid #fff;
 }
 
 header {
@@ -45,11 +50,11 @@ body {
   margin: 0;
   padding: 0;
   display: block;
+  min-height: 100%;
 }
 
 html {
   font-size: 1em;
-  line-height: 1.5;
   color: #003399;
   overflow-y: scroll;
   min-height: 100%;
@@ -72,6 +77,21 @@ ul {
 li {
 	align-items:center;
 	justify-content:center;
+}
+
+.selectContainer {
+  padding-top: .3em;
+  padding-bottom: .3em;
+}
+
+.big {
+  font-size: 1.5em;
+}
+
+.bigButton {
+  padding-left: .3em;
+  line-height: 1.3em;
+  font-size: 1.3em;
 }
 
 .nav-content {
@@ -147,6 +167,26 @@ li {
 .columns {
   display: flex;
   justify-content: center;
+}
+
+.list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  padding: 0px 10px;
+  width: 100%;
+}
+
+.team_element {
+  float: left;
+  padding: 10px 10px;
+    display: block;
+    text-align: center;
+}
+
+.team_element:hover:not(.active) {
+  background-color: #111;
 }
 
 @media screen and (max-width: 900px) {
